@@ -85,11 +85,33 @@ a:hover{
 }
 
 .side_bar_menu ul li{
-	margin: 0 10px;
+	position: relative;
+	margin-left: 10px;
 }
 
 .side_bar_menu ul li a{
 	display: block;
 	padding: 7px;
     border-bottom: 1px solid #ffffff;
+}
+
+.side_bar_menu li ul li a{
+	background: #09336a;
+    color: #ffffff;
+    transition: all .2s;
+}
+
+.side_bar_menu li ul li a:hover{
+	color: #263544;
+	background: #ffffff;
+}
+
+
+.side_bar_menu li i.right_icon{
+	position: absolute;right: 10px;
+	top: 10px;
+}
+
+.side_bar_menu li ul{
+	display: none;
 }
