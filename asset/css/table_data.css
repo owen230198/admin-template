@@ -99,6 +99,7 @@
     padding: 5px 10px;
     display: block;
     cursor: pointer;
+    text-align: left;
 }
 
 .function_group_btn li:not(:last-child) a, .function_group_btn li:not(:last-child) span{
