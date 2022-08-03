@@ -5,8 +5,9 @@
 		<base href="">
 		<link rel="stylesheet" type="text/css" href="asset/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="asset/css/bootstrap-icons.css">
-		<link rel="stylesheet" type="text/css" href="asset/css/style.css">
 		<link rel="stylesheet" type="text/css" href="global/css/style.css">
+		<link rel="stylesheet" type="text/css" href="asset/css/style.css">
+		<link rel="stylesheet" type="text/css" href="asset/css/table_data.css">
 	</head>
 	<body>
 		<header class="header bg_white d-flex align-items-center justify-content-between">
@@ -15,7 +16,7 @@
 					<img src="asset/images/logo.png">
 				</a>
 				<button class="button_sidebar bg_main color_white base_hover smooth">
-					<i class="bi bi-list"></i>
+					<i class="bi bi-arrow-bar-left"></i>
 				</button>
 			</div>
 			<div class="right_header d-flex align-items-center">
@@ -24,21 +25,26 @@
 						<i class="bi bi-globe fs-20"></i>
 						Website
 					</a>
-					<a class="mr_10 smooth" href="" target="_blank" title="Xóa cache">
+					<a class="mr_10 smooth" href="" title="Xóa cache">
 						<i class="bi bi-shield-x fs-20"></i>
 						Xóa cache
 					</a>
 				</div>
-				<div class="admin_menu d-flex align-items-center cursor_pointer">
+				<div class="admin_menu d-flex align-items-center position-relative cursor_pointer">
 					<a class="avatar_img" href="javascript:void(0)" title="Profile của bạn">
 						<img src="asset/images/avatar.jpg">	
 					</a>
 					<i class="bi bi-chevron-compact-down mx-1"></i>
-					Griezmann
+					Antoine Griezmann
+					<ul class="profile_menu" style="display: none;">
+						<li><a class="bg_main color_white" href="">Profile</a></li>
+						<li><a class="bg_main color_white" href="">Đổi mật khẩu</a></li>
+						<li><a class="bg_main color_white" href="">Đăng xuất</a></li>
+					</ul>
 				</div>	
 			</div>
 		</header>
-		<div class="side_bar_menu bg_main color_white">
+		<div class="sidebar_menu bg_main color_white show">
 			<ul class="my-3">
 				<li>
 					<i class="bi bi-chevron-compact-right right_icon"></i>
@@ -90,6 +96,112 @@
 				</li>		
 			</ul>	
 		</div>
+
+		<div class="main_content">
+			<div class="container-fluid">
+				<div class="title_main d-flex align-items-center my-3 justify-content-between">
+					<h1 class="fs-25 font_bold text-capitalize">Danh sách tài khoản</h1>
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb mb-0">
+							<li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+							<li class="breadcrumb-item"><a href="#">Danh sách tài khoản</a></li>
+						</ol>
+					</nav>
+				</div>
+				<div class="main_content_child h-100 bg_white radius_5 p-3">
+					<form action="" method="" class="filterDataForm d-flex align-items-center justify-content-between mb-4">
+						<div class="filter_shown">
+							<div class="order_by d-flex align-items-center form-group mb-2">
+								<label class="filter_label mr_10 bg_main color_white radius_5 d-flex align-items-center justify-content-center">
+									<i class="bi bi-filter mr_5 fs-15"></i>
+									Sắp xếp
+								</label>
+								<select name="" class="form-control mr_10">
+									<option value="">Ngày tạo</option>
+									<option value="">Tên</option>
+									<option value="">Ngày sửa</option>
+								</select>
+								<select name="" class="form-control">
+									<option value="">Z - A</option>
+									<option value="">A - Z</option>
+								</select>
+							</div>
+							<div class="find_name_input d-flex align-items-center">
+								<input type="text" class="search_name_input text_input" value="" placeholder="Nhập từ khóa tìm kiếm">
+								<button type="submit" class="bg_main color_white search_name_button smooth">
+									<i class="bi bi-search"></i>
+								</button>
+							</div>
+						</div>
+						<div class="dat_table_group_button d-flex align-items-center">
+							<button class="bg_main radius_5 color_white smooth main_button mr_10">
+								<i class="bi bi-funnel fs-15 mr_5"></i>Điều kiện
+							</button>
+							<button class="bg_main radius_5 color_white smooth main_button mr_10">
+								<i class="bi bi-plus fs-15 mr_5"></i>Thêm mới
+							</button>
+							<button class="bg_main radius_5 color_white smooth main_button">
+								<i class="bi bi-book fs-15 mr_5"></i>Trợ giúp
+							</button>
+						</div>
+					</form>
+
+					<div class="table_content">
+						<table class="table align-middle table-row-dashed">
+							<thead class="color_gray">
+								<tr class="text-start">
+									<th class="text-center font_bold">
+											<input class="table_check_input" type="checkbox"/>
+									</th>
+									<th class="text-center font_bold">#</th>
+									<th class="text-center font_bold">Hình ảnh</th>
+									<th class="text-center font_bold">Họ tên</th>
+									<th class="text-center font_bold">Username</th>
+									<th class="text-center font_bold">Nhóm quyền</th>
+									<th class="text-center font_bold">Kích hoạt</th>
+									<th class="text-center font_bold">Ngày tạo</th>
+									<th class="text-center font_bold">Chức năng</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="text-center">
+										<input class="table_check_input" type="checkbox"/>
+									</td>
+									<td class="text-center">
+										1
+									</td>
+									<td>
+										<p class="text-center mb-0">Image</p>
+									</td>
+									<td>
+										<p class="text-center mb-0">Nguyen Duy Khanh</p>	
+									</td>
+									<td>
+										<p class="text-center mb-0">dev</p>
+									</td>
+									<td>
+										<p class="text-center mb-0">Admin</p>
+									</td>
+									<td>
+										<p class="text-center mb-0">Admin</p>
+									</td>
+									<td>
+										<p class="text-center mb-0">14 Dec 2020, 8:43 pm</p>
+									</td>
+									<td class="text-end">
+										<a href="" class="bg_main color_white main_button smooth w-auto">
+											<i class="bi bi-hand-index fs-15 mr_5"></i>
+										</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>	
+		</div>
+		
 		<script type="text/javascript" src="asset/script/jquery-3-6-0.min.js" defer></script>
 		<script type="text/javascript" src="asset/script/bootstrap.min.js" defer></script>
 		<script type="text/javascript" src="asset/script/script.js" defer></script>	

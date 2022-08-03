@@ -210,22 +210,14 @@ textarea {
 
 .breadcrumb li {
   position: relative;
-  padding-right: 15px;
-}
-
-.breadcrumb li:last-child:after {
-  display: none;
 }
 
 .breadcrumb li:last-child a {
   pointer-events: none;
 }
-
-.breadcrumb li:after {
-  position: absolute;
-  content: '\f105';
-  font-family: FontAwesome;
-  right: 5px;
+.breadcrumb-item+.breadcrumb-item::before{
+  content:'\F27B';
+  font-family: 'bootstrap-icons';
 }
 
 .color_gray {
@@ -272,4 +264,8 @@ input[type=date], input[type=datetime-local], input[type=month], input[type=time
 
 .cursor_pointer{
   cursor: pointer;
+}
+
+.radius_5{
+  border-radius: 5px;
 }

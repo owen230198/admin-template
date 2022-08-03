@@ -12,9 +12,12 @@
 
 body {
 	font-family: 'Robbo';
-	font-size: 14px;
+	font-size: 13px;
 	color: #263544;
+	height: 100%;
+	background: #f5f8fa;
 }
+
 
 a{
 	color: #263544;
@@ -22,6 +25,10 @@ a{
 
 a:hover{
 	color: #538ec9;	
+}
+
+.font_bold{
+	font-family: 'Robbo-bold';
 }
 
 .header{
@@ -34,7 +41,7 @@ a:hover{
 }
 
 .logo_dashboard {
-	width: 240px;
+	width: 165px;
 }
 
 .logo_dashboard img {
@@ -51,7 +58,7 @@ a:hover{
 
 .button_sidebar {
 	border-radius: 3px;
-	font-size: 25px;
+	font-size: 15px;
 }
 
 .button_sidebar:hover {
@@ -75,43 +82,99 @@ a:hover{
 	object-fit: fill;
 }
 
-.side_bar_menu{
+.sidebar_menu{
 	position: fixed;
 	z-index: 1;
 	left: 0;
 	top: 52px;
-	width: 250px;
+	width: 0;
 	height: 100%;
+	transition: all .1s;
+	overflow: auto;
 }
 
-.side_bar_menu ul li{
+.sidebar_menu.show{
+	width: 175px;
+}
+
+.sidebar_menu ul li{
 	position: relative;
-	margin-left: 10px;
+	margin-left: 5px;
 }
 
-.side_bar_menu ul li a{
+.sidebar_menu ul li a{
 	display: block;
 	padding: 7px;
-    border-bottom: 1px solid #ffffff;
 }
 
-.side_bar_menu li ul li a{
+.sidebar_menu ul li:not(:last-child){
+	border-bottom: 1px solid #20303e;
+}
+
+.sidebar_menu li ul li a{
 	background: #09336a;
     color: #ffffff;
     transition: all .2s;
 }
 
-.side_bar_menu li ul li a:hover{
+.sidebar_menu li ul li a:hover{
 	color: #263544;
 	background: #ffffff;
 }
 
 
-.side_bar_menu li i.right_icon{
+.sidebar_menu li i.right_icon{
 	position: absolute;right: 10px;
 	top: 10px;
 }
 
-.side_bar_menu li ul{
+.sidebar_menu li ul{
 	display: none;
+}
+.profile_menu{
+	position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    margin-top: 7px;;
+}
+
+.profile_menu li a{
+	display: block;
+	padding: 5px 15px;
+}
+
+.profile_menu li:not(:last-child){
+	border-bottom: 1px solid #20303e;
+}
+
+.form-control{
+	font-size: 13px;
+    padding: 5px 10px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+}
+
+select.form-control{
+	text-align: center;
+	cursor: pointer;
+}
+
+.main_button{
+	padding: 5px 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 50px;
+	min-height: 32px;
+	box-shadow: 1px 1px 3px rgb(61, 60, 60);
+}
+
+.main_button:hover{
+	background: #4e77a1;
+}
+
+.main_content{
+	font-size: 14px;;
 }
