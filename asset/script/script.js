@@ -6,17 +6,18 @@ var mainContent = function(){
 
 var menuSidebar = function()
 {
-	$(document).on('click','li.li_sidebar',function(event){
+	$(document).on('click','li.li_sidebar>a',function(event){
 		event.preventDefault();
 		$('li.li_sidebar').find('ul').removeClass('active');
-		$('li.li_sidebar').find('ul').slideUp();
-		ul = $(this).find('ul');
+		$('li.li_sidebar').find('ul').slideUp(100);
+		liSidebar = $(this).parent();
+		ul = liSidebar.find('ul');
 		if (ul.css('display')=='block') {
-			$(this).removeClass('active');
-			ul.slideUp();	
+			liSidebar.removeClass('active');
+			ul.slideUp(100);	
 		}else{
-			$(this).toggleClass('active');
-			ul.slideDown();
+			liSidebar.toggleClass('active');
+			ul.slideDown(100);
 		}
 	});
 }
@@ -47,7 +48,7 @@ var profileMenu = function()
 		if(ul.css('display')=='none'){
 			ul.slideDown(175);
 		}else{
-			ul.slideUp(175);
+			ul.slideUp(100);
 		}
 	});
 }

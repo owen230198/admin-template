@@ -163,11 +163,10 @@ select.form-control{
 
 .main_button{
 	padding: 5px 15px;
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	min-width: 50px;
-	min-height: 32px;
 	box-shadow: 1px 1px 3px rgb(61, 60, 60);
 }
 
@@ -177,4 +176,31 @@ select.form-control{
 
 .main_content{
 	font-size: 14px;;
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+}
+  
+::-webkit-scrollbar-track {
+	background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+	background: #09336a; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555; 
+}
+
+.table>:not(caption)>*>*{
+	border: 1px dashed #ebebeb;
+}
+
+@media(max-width:1400px)
+{
+	.main_content{
+		font-size: 13px;;
+	}
 }
