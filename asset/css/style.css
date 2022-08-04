@@ -18,6 +18,9 @@ body {
 	background: #f5f8fa;
 }
 
+.bg_body{
+	background: #f5f8fa;
+}
 
 a{
 	color: #263544;
@@ -162,7 +165,7 @@ select.form-control{
 }
 
 .main_button{
-	padding: 5px 15px;
+	padding: 7px 21px;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -183,7 +186,7 @@ select.form-control{
 }
   
 ::-webkit-scrollbar-track {
-	background: #f1f1f1; 
+	background: #f5f8fa; 
 }
 
 ::-webkit-scrollbar-thumb {
@@ -194,8 +197,31 @@ select.form-control{
 	background: #555; 
 }
 
-.table>:not(caption)>*>*{
-	border: 1px dashed #ebebeb;
+.base_form_input{
+	height: 32px;
+	width: 100%;
+	border-radius: 5px;
+	overflow: hidden;
+	max-width: 450px;
+	margin-left:auto;
+	margin-right: auto;
+}
+
+.base_form_input .text_base_input{
+	border:none;
+	height: 100%;
+	width: 100%;
+	padding: 3px 9px;
+}
+
+.base_form_input .icon_input{
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 32px;
+	width: 40px;
+	font-size: 17px;
 }
 
 @media(max-width:1400px)

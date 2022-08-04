@@ -120,3 +120,7 @@
     max-width: 111px;
     transform: translateX(-50%);
 }
+
+.table>:not(caption)>*>*{
+	border: 1px dashed #ebebeb;
+}

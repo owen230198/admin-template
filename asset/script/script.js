@@ -1,7 +1,9 @@
 var mainContent = function(){
-	header = $('header').outerHeight();
-	sidebar = $('.sidebar_menu').width();
-	$('.main_content').css({'padding-top': header, 'padding-left': sidebar});
+	if($('header').length>0 && $('.sidebar_menu').length>0 && $('.main_content').length>0){
+		header = $('header').outerHeight();
+		sidebar = $('.sidebar_menu').width();
+		$('.main_content').css({'padding-top': header, 'padding-left': sidebar});
+	}
 }
 
 var menuSidebar = function()

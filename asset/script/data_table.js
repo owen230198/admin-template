@@ -11,7 +11,7 @@ var showFunctionButton = function()
 			groupButton.slideUp(100);
 		}
 	});
-	if($('ul.function_group_btn').length>0)
+	if($('ul.function_group_btn').length>0){
 		$(window).click(function(e) 
 		{
 			if($('.funtion_data_table').has(e.target).length == 0 && !$('.funtion_data_table').is(e.target)){
@@ -19,7 +19,22 @@ var showFunctionButton = function()
 				$('ul.function_group_btn').slideUp(100);
 			}
 		});
+	}
+		
+}
+
+var checkBoxRecordTable = function()
+{
+	$(document).on('change', '.c_all_checkbox', function(event){
+		event.preventDefault();
+		if($(this).is(':checked')){
+			$('.c_checkbox').prop('checked', true);
+		}else{
+			$('.c_checkbox').prop('checked', false);
+		}
+	})	
 }
 $(function(){
-    showFunctionButton();    
+    showFunctionButton();
+	checkBoxRecordTable();    
 })

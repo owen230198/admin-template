@@ -269,3 +269,11 @@ input[type=date], input[type=datetime-local], input[type=month], input[type=time
 .radius_5{
   border-radius: 5px;
 }
+
+.h_100vh{
+  height: 100vh !important;
+}
+
+.font-italic{
+  font-style: italic !important;
+}
