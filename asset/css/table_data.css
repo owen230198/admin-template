@@ -114,7 +114,9 @@
 .function_group_btn{
     position: absolute;
     width: 100%;
-    left: 0;
+    left: 50%;
     top:100%;
-    z-index: 2;
+    z-index: 2;    
+    max-width: 111px;
+    transform: translateX(-50%);
 }
